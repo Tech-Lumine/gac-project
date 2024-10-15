@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> GAC PROJECT </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <style>
+    body {
+         
+        font-family: "Mulish", sans-serif;
+       margin: 0;
+       padding: 0;
+       background-color: black;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+        background-color: #121212;
+    
+    }
+
+
+    
+
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+    
+                   
+     .navbar-brand{
+        display: flex;
+        font-size: 1.25rem;
+        white-space: nowrap;
+        margin: 0px 15px;
+;}
+    
+    
+    .nav-bar.fixed{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }  
+      .navbar-container{
+        position:relative;
+        max-width: 90%;
+        padding: 0%;
+        margin: 0%;
+        top: 0;
+        z-index: 20px ;
+      
+      }
+       
+      
+      .navbar-nav{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0%;
+        margin-bottom: 0%;
+        list-style: none;
+      }
+      
+     
+      .nav-link {
+font-family: Bricolage Grotesque;
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.02em;
+text-align: center;
+color: #C1C1C1;
+
+
+    
+      }
+
+         .navbar .nav-link.active{
+            font-weight: 600;
+            color:#FD7E09;
+          }
+      
+          .navbar .navbar-brand img{
+           width: 150px;
+            height: 105px;
+          display: block;
+          padding-left: -23;
+          margin-left:-80px;}
+          
+          .dropdown-meun{
+            background-color:#252e26 ;
+          }
+         
+          .dropdown-item{
+            color:blueviolet;
+          }
+          .navbar .navba-toggle{
+            border: none ;
+            outline: none;
+            box-shadow: none;
+          }
+          .navbar .navbar-toggle-btn{
+            cursor: pointer;
+            position: relative;
+            top: 5px;
+            z-index: 1100px;
+          }
+    
+    
+      
+    .starter-template {
+padding: 3rem 1.5rem;
+text-align: center;
+
+
+
+
+    }
+    
+    
+    h1 {
+font-size: 40px;
+font-weight: 800;
+line-height: 81.6px;
+letter-spacing: 0.02em;
+text-align: center;
+color: #FFFFFF;
+    }
+    
+    .lead {
+      font-family: Bricolage Grotesque;
+font-size: 28px;
+font-weight: 500;
+line-height: 33.6px;
+letter-spacing: 0.02em;
+text-align: center;
+color: #C1C1C1;
+
+      
+    
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-stretch:expanded;
+    
+    }
+    
+    .btn-light-2{
+      border-radius: 20px;
+      border: 1px solid;
+      padding: 10px;
+      color: #FD7E09;
+       line-height: 1;
+       margin: 15px 0px;
+       outline: none;
+       border-end-start-radius: 20px;
+        box-shadow: none;
+        padding: 14px;
+        text-decoration: none;
+        transition: all ease-in .3s;
+        display: inline-block;
+        margin-right: 20px;
+    
+    } 
+
+    
+   
+    
+    .btn-light{
+    border-radius: 20px;
+      border: 1px solid;
+      padding: 10px;
+      background-color:#FD7E09;
+      color: black;
+       line-height: 1;
+       margin: 15px 0px;
+       outline: none;
+       border-end-start-radius: 20px;
+        box-shadow: none;
+        padding: 14px;
+        text-decoration: none;
+        transition: all ease-in .3s;
+    }
+    
+    
+    
+      
+      .about-container {
+          padding-right: 40px ;
+          
+    
+      }
+      .about-header-text {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 1;
+          margin-bottom: 10px;
+          letter-spacing: 0;
+      }
+      
+      .border-title, .border-title-2 {
+          position: relative;
+          z-index: 1;
+          padding-bottom: 0;
+      }
+      .about-image-img img {
+          margin-bottom: 8px;
+      }
+      
+      .sponsor {
+          position: relative;
+          padding: 0 5px;
+          margin-bottom: 25px;
+      }
+      
+      
+      
+      .sponsor img {
+          box-shadow: none;
+          width: 100%;
+          margin-top: 5px;
+          border-radius: 6px;
+          transition: all ease-in .3s;
+      }
+      
+      
+      
+      
+      img.lazy {
+          width: 100%;
+          min-height: 200px;
+          height: auto;
+          display: block;
+          background: #f6f9ff;
+          background-image: url(image/Sterling_One_Foundation_Logo.png);
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+      }
+    
+      
+      .sponsors-container .parent-group {
+          margin-bottom: 45px;
+          border-bottom: 1px solid #e8e8e8;
+          padding-bottom: 25px;
+      }
+      
+      
+      
+      
+      .partners-sponsors-container {
+          padding: 80px 0px 0px;
+      }
+      
+      .sponsors-wrap {
+          position: relative;
+          width: 100%;
+          padding: 30px 0 0;
+          margin: 0;
+          display: inline-block;
+          overflow: hidden;
+        
+      }
+      
+    
+    
+    
+    
+    .about-header-text2 {
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      letter-spacing: 0;
+      color: hsl(0, 98%, 48%);
+      text-align: center;
+    }
+    
+    .line-left,.line-right{
+      display: inline-block;
+      width:8%;
+      height: 1px;
+      background-color: #fff;
+      vertical-align: middle;
+      margin: 0 5px;
+    
+    }
+    
+    
+    .border-title, .border-title-2 {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 10px;
+    }
+    
+    .about-GAC-img img {
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    
+    .lazy {
+      width: 100%;
+      min-height: 90%;
+      height: auto;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      border-radius: 10px;
+    }
+    
+    
+   
+    
+    h3{
+      font-size: 20px;
+      color: #e8e8e8;
+    }
+    p{
+      color: #fff;
+      font-size: 15px;
+    }
+    
+    
+    .why-attend-container {
+      padding: 40px 20px;
+    }
+    
+    .why-attend-card {
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(8, 7, 7, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .why-attend-card-header {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .section{
+      width: 100%;
+      padding: 30px;
+      background-color: #333;
+    }
+    
+    
+    .container {
+      padding-left: 50px; /* adjust the value as needed */
+    }
+    
+    .about-container {
+      padding-left: 20px; /* adjust the value as needed */
+    }
+    
+    .why-attend-container {
+      padding-left: 20px; /* adjust the value as needed */
+    }
+    .what-we-offer-wrap {
+          position: relative;
+      }
+      
+      .about-header-text2 {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 1;
+          margin-bottom: 15px;
+          letter-spacing: 0;
+          color:white;
+          top: 20px;
+      }
+      
+      .what-we-offer-card-header {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 1.5;
+          letter-spacing: 0;
+          transition: all ease-in .1s;
+          color: #ffff;
+      }
+    
+    
+    
+    
+    .what-we-offer-card {
+      padding: 30px;
+      border: 1px solid grey;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #121212;
+    }
+    
+    .what-we-offer-card-header {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .overlay-text {
+      font-size: 16px;
+      color: floralwhite;
+    }
+    
+    .btn {
+      color: #FD7E09;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    
+    
+    .btn:hover {
+      background-color: #fff;
+    }
+    
+    
+    .event-container {
+          padding: 45px;
+          padding-left: 30px;
+      }
+    
+      .event-header-text2{
+        font-family: Bricolage Grotesque;
+font-size: 32px;
+font-weight: 600;
+line-height: 38.4px;
+letter-spacing: 0.02em;
+text-align: center;
+color: #FFFFFF;
+
+
+      }
+    
+  .h3{
+font-size: 28px;
+font-weight: 600;
+line-height: 33.6px;
+letter-spacing: 0.02em;
+text-align: left;
+  font-family: Bricolage Grotesque;
+  color:  #FFFFFF;
+
+
+    }
+    .p{
+      font-size: 24px;
+font-weight: 400;
+line-height: 28.8px;
+letter-spacing: 0.02em;
+text-align: left;
+color: var(--Grey, #D9D9D9);
+
+    }
+ 
+
+  
+
+footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 50px 0 0;
+  
+}
+
+footer .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+footer h5 {
+  font-family: Bricolage Grotesque;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-bottom: 20px; /* Added margin */
+}
+
+.team {
+  font-family: Bricolage Grotesque;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+  font-family: Bricolage Grotesque;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-left: 30px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ccc;
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media i {
+  font-size: 20px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px; /* Adjusted margin */
+}
+
+.social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 23px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-light-2 {
+  border-radius: 20px;
+  border: 1px solid;
+  color: #FD7E09;
+  line-height: 1;
+  margin: 25px 0px 0px; /* Adjusted margin */
+  outline: none;
+  border-end-start-radius: 20px;
+  box-shadow: none;
+  text-decoration: none;
+  transition: all ease-in .3s;
+  font-family: Bricolage Grotesque;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #A1A1A1;
+}
+
+.btn-light-3 {
+  border-radius: 20px;
+  border: 1px solid;
+  background-color: #FD7E09;
+  color: black;
+  line-height: 1;
+  margin: 25px 0px 0px; /* Adjusted margin */
+  outline: none;
+  border-end-start-radius: 20px;
+  box-shadow: none;
+  padding: 14px;
+  text-decoration: none;
+  transition: all ease-in .3s;
+  font-family: Bricolage Grotesque;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+/* Adjusted hr styles */
+footer hr {
+  width: 100%;
+  border-top: 1px solid #444;
+  margin-top: 40px; /* Added margin */
+}
+
+.copy {
+  font-family: Bricolage Grotesque;
+font-size: 14px;
+font-weight: 400;
+line-height: 16.8px;
+letter-spacing: 0.02em;
+text-align: left;
+
+}
+
+.btn-light-2{
+margin: 20px;
+border-radius: 20px;
+      border: 1px solid;
+      color: #FD7E09;
+       line-height: 1;
+       margin: 15px 0px;
+       outline: none;
+       border-end-start-radius: 20px;
+        box-shadow: none;
+        padding: 14px;
+        text-decoration: none;
+transition: all ease-in .3s;
+
+font-family: Bricolage Grotesque;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.2px;
+letter-spacing: 0.02em;
+text-align: center;
+  cursor: pointer;
+  border: 1px solid #A1A1A1;
+  margin-right: 10px;
+
+
+
+}
+.btn-light-3{
+    border-radius: 20px;
+      border: 1px solid;
+      background-color:#FD7E09;
+      color: black;
+       line-height: 1;
+       margin: 15px 0px;
+       outline: none;
+       border-end-start-radius: 20px;
+        box-shadow: none;
+        padding: 14px;
+        text-decoration: none;
+transition: all ease-in .3s;
+
+font-family: Bricolage Grotesque;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.2px;
+letter-spacing: 0.02em;
+text-align: center;
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+.sic-item i {
+  font-size: 20px;
+  color:  var(--Orange, #FD7E09);
+}
+
+
+.sic-item:hover i {
+  color: #ccc;
+}
+
+.copyright-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy {
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.sic-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  border: 0.2px solid var(--Orange, #FD7E09)
+
+}
+
+.sic-item i {
+  font-size: 20px;
+  color: #FD7E09;
+  ;
+}
+
+.about-GAC-img img {
+width: 100%;
+height: auto;
+max-height: 400px; /* adjust this value to your needs */
+object-fit: cover;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+footer {
+  padding: 40px 0 ;
+}
+
+footer h5 {
+  margin-bottom: 20px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.sic-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.sic-item i {
+  font-size: 20px;
+  color:#FD7E09;
+}
+
+
+
+.copy {
+  margin: 0;
+}
+
+
+
+      </style>
+  <body>
+    <header>
+      <!-- place navbar here -->
+       <div class="page-container" class="et-animated-content" style="padding-top:px;"  >
+        <header class="main-header";>
+          <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+              <a class="navbar-brand" href="#"><img src="Image/image copy.png" alt="logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+              aria-expanded="false" aria-label="Toggle navigation">
+              <input type="checkbox" name="Toggle-menu" id="Toggle-menu">
+              <label for="Toggle-menu" type="button" class="toggle-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </label>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Programs
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="event.html">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact </a>
+                  </li>
+                </ul>
+               
+              </div>
+            </div>
+          </nav>
+        </header>
+
+
+        <main>
+
+  <main role="main" class="container">
+
+    <div class="starter-template">
+      <h1>IGNITE CREATIVITY, FOSTER GROWTH</h1>
+      <p class="lead">Empowering Creatives  Globally with Mentorship, Partenrships and Sustainable<br>
+         Opportunities to Shape a Better Future.</p>
+         <a class="btn-light-2" href="3">Explore our Programs</a>
+         <a class="btn-light" href="#">Join Our Community</a>
+        </div>
+  </main>
+
+
+
+  <!-- ..................... -->
+
+
+
+<div class="row sponsors-group parent-group">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+       <div class="row text-center justify-content-center">
+      </div>
+      <div class="row sponsors-group text-center justify-content-center">
+          <div class="col-md-4"><div class="sponsor"><a href="" target="_blank"><img src="Image/image copy 2.png" title="" alt="A PA"></a></div></div>
+          <div class="col-md-4"><div class="sponsor"><a href=" "><img src="Image/12132d810b706df3859c2ba8c2a5dd21.jpeg" title="" alt=""></a></div></div>
+          <div class="col-md-4"><div class="sponsor"><a href="_blank"><img src="Image/image copy 3.png" title="" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="col-md-1">
+
+            </div>
+
+  <!-- About Us section........ -->
+
+  <div class="container bg-grey-light">
+    <div class="row about-container">
+      <div class="col-md-12 text-center justify-content-center">
+        <h3 class="about-header-text2 mb-5 border-title">
+          <span class="line-left"></span>
+          About US
+        <span class="line-right"></span></h3>
+      </div>
+      <div class="row d-flex align-items-top row-wrapper">
+        <div class="col-md-7 vpad-sm vpad-no-left">
+          <h3>Our Mission</h3>
+          <p>Global Art Coterie (GAC) is dedicated to fostering a global community of artists by providing mentorship, securing sponsorship, and building sustainable partnerships. We aim to strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development, aligning with the 17th Sustainable Development Goal.</p>
+          <br>
+          <h3>Our Vission</h3>
+          <p>To be a leading global platform that empowers creatives through robust support systems, enabling them to thrive and contribute to sustainable Development worldwide.</p>
+        </div>
+        <div class="col-md-5 mt-0 mt-md-0 about-GAC-img">
+          <img class="lazy" alt="about-GAC" src="Image/ded37bba04ab588ef8860b16f9a9a02f.jpeg">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ <!-- ............................ -->
+  <section id="why-attend-section">
+    <div class="container">
+      <div class="why-attend-container">
+        <div class="col-md-12 text-center justify-content-center">
+          <h3 class="about-header-text mb-5 border-title-2">
+            <span class="line-left"></span>
+            Our Core Values
+            <span class="line-right"></span>
+          </h3>
+        </div>
+        <div class="row gap-md-0 gap-5">
+          <!-- Section 1 -->
+          <div class="col-md-3 why-attend-wrap">
+            <div class="why-attend-card">
+              <div class="icon-wrap">
+              </div>
+              <h3 class="why-attend-card-header">Empowerment</h3>
+              <p>Providing resouces and 
+                opportunities for arist to 
+                succeed
+              </p>
+            </div>
+          </div>
+          
+          <!-- Section 2 -->
+          <div class="col-md-3 why-attend-wrap">
+            <div class="why-attend-card">
+              <div class="icon-wrap">
+              </div>
+              <h3 class="why-attend-card-header">Innovation</h3>
+              <p>Encouraging creativity and innovative approaches in the arts</p>
+            </div>
+          </div>
+          
+          <!-- Section 3 -->
+          <div class="col-md-3 why-attend-wrap">
+            <div class="why-attend-card">
+              <div class="icon-wrap">
+              </div>
+              <h3 class="why-attend-card-header">Community</h3>
+              <p>Building a supportive and collabortive network of creativites</p>
+            </div>
+          </div>
+          
+          <!-- Section 4 -->
+          <div class="col-md-3 why-attend-wrap">
+            <div class="why-attend-card">
+              <div class="icon-wrap">
+              </div>
+              <h3 class="why-attend-card-header">Intergrity</h3>
+              <p>Upholding transparency, accountability, and ethical practices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+
+
+  <section id="what-we-offer-section">
+    <div class="container">
+      <div class="what-we-offer-container">
+        <h2 class="about-header-text2 mb-5 border-title-2">
+          <span class="line-left"></span> What We Offer <span class="line-right"></span>
+        </h2>
+        <div class="row gap-md-0 gap-5">
+          <div class="col-md-4 what-we-offer-wrap">
+            <div class="what-we-offer-card">
+              <div class="icon-wrap"></div>
+              <h4 class="what-we-offer-card-header">Mentorship </h4>
+              <p class="overlay-text">Tailored guidance from<br>experienced artists and<br>industry professionals.</p>
+              <button type="button" class="btn">Learn More</button>
+             </div>
+          </div>
+          <div class="col-md-4 what-we-offer-wrap">
+            <div class="what-we-offer-card">
+              <div class="icon-wrap"></div>
+              <h4 class="what-we-offer-card-header">Sponsorship</h4>
+              <p class="overlay-text">Access to funding<br>and resources to support<br>artistic projects.</p>
+              <button type="button" class="btn">Learn More</button>
+            </div>
+          </div>
+          <div class="col-md-4 what-we-offer-wrap">
+            <div class="what-we-offer-card">
+              <div class="icon-wrap"></div>
+              <h4 class="what-we-offer-card-header">Community Events</h4>
+              <p class="overlay-text">Workshops, exhibitions,<br>and networking opportunities<br>to connect with other creatives.</p>
+              <button type="button" class="btn">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+
+  <section>
+    <div class="event-container bg-grey-light">
+      <div class="row event-container">
+        <div class="col-md-12 text-center justify-content-center">
+          <h3 class="event-header-text2 mb-5 border-title">
+            <span class="line-left"></span>
+            UPCOMING EVENT
+          <span class="line-right"></span></h3>
+        </div>
+        <div class="row d-flex align-items-top row-wrapper">
+          <div class="col-md-7 vpad-sm vpad-no-left">
+            <h3 class="h3">WHITEWASHING: A SPOKEN WORD AND LIVE
+              <br> MUSIC CONCERT</h3>
+            
+            <p class="p">A powerful and immersive spoken word and live music concert that explore the intricate layers of identity,culture,love and truth.  Regular ticket: ₦5000, VIP ticket : ₦30,000.</p> <br>
+              <br>
+              <a class="btn-light-2" href="3">Explore our Programs</a>
+              <a class="btn-light" href="#">Join Our Community</a>
+            
+            
+    
+          </div>
+          <div class="col-md-5 mt-0 mt-md-0 about-GAC-img">
+            <img class="lazy" alt="about-GAC" src="Image/image copy 4.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+<br>
+<br>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h5>Stay Connected</h5>
+              <p class="team">Join our community to receive the latest update on events, mentorship programs, and opportunities.
+              </p><br>
+              <a class="btn-light-2" href="#">Enter Your Email</a>
+                <a class="btn-light-3" href="#">Subscribe</a>
+
+            </div>
+            <div class="col-md-3">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled list-inline">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Mentorship</a></li>
+                <li><a href="#">Sponsorship Opportunities</a></li>
+                <li><a href="#">Events</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5>Contact Information</h5>
+              
+<ul class="list-unstyled list-inline">
+<li>
+  <a href="#">
+    <i class="fa-regular fa-envelope me-2"></i>
+    globalcotrie@gmail.com
+  </a>
+</li>
+<li>
+  <a href="#">
+    <i class="fa-solid fa-phone me-2"></i>
+    08161436632 or 
+    08061436632
+  </a>
+</li>
+</ul>
+            </div>
+            <div class="col-md-3">
+              <h5>Legal</h5>
+              <ul class="list-unstyled list-inline">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Condition</a></li>
+              </ul>
+            </div>
+          </div>
+          <br>
+          <br>
+          <hr style="width: 100%; border-top: 1px solid #444; padding: 20px;">
+          <div class="row">
+        
+<div class="row copyright-container">
+  <div class="col-md-7 col-lg-8">
+    <p class="copy">&copy;copyright@2024 Global Art Coeterie. All Rights Reserved.</p>
+  </div>
+  <div class="col-md-5 col-lg-4 text-right">
+    <div class="social-icons">
+      <a class="sic-item" href="(link unavailable)" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a class="sic-item" href="(link unavailable)" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a class="sic-item" href="(link unavailable)" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+        
+
+   </div>
+ 
+   
+  
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

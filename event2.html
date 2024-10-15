@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>GAC</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+<style>
+
+body, html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Objective, sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.75;
+    text-align: left;
+    background-color: hsl(0, 0%, 7%);
+}
+
+.navbar-dark {
+    color: #585555;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+@media (min-width: 1200px) {
+    .navbar-expand-xl {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-flow: row nowrap;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+    }
+}
+
+.navbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #dcdbdb;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+    z-index: -1;
+}
+
+.navbar-dark>.container {
+    position: relative;
+}
+@media (min-width: 1200px) {
+    .navbar-expand-xl>.container, .navbar-expand-xl>.container-fluid, .navbar-expand-xl>.container-xl {
+        flex-wrap: nowrap;
+    }
+}
+
+.navbar-brand {
+    line-height: 1.75rem;
+    font-weight: 500;
+    color: inherit !important;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: .78125rem;
+    padding-bottom: .78125rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.navbar-dark .navbar-toggler {
+    color: #f1e9e9;
+    border-color: blanchedalmond;
+    
+}
+@media (min-width: 1200px) {
+    .navbar-expand-xl .navbar-toggler {
+        display: none;
+    }}
+
+ 
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
+@media (min-width: 1200px) {
+    .navbar-expand-xl .navbar-collapse {
+        flex-basis: auto;
+    }
+}
+
+.navbar-collapse {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+@media (min-width: 1200px) {
+  .navbar-expand-xl .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+    .navbar-expand-xl .navbar-nav {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+    }
+}
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+.dropdown {
+    position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-family: Bricolage Grotesque;
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.02em;
+text-align: center;
+color: #C1C1C1;
+
+}
+@media (min-width: 1200px) {
+    .navbar-expand-xl .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+.navbar-nav .nav-link {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transition-property: color;
+    transition-property: color;
+}
+
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.dropdown-toggle {
+    white-space: nowrap;
+}
+
+
+.dropdown-menu {
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    min-width: 12.5rem;
+    padding: 0 0;
+    margin: .125rem 0 0;
+    font-size: .9375rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #f5ba4b;
+    text-decoration: none;
+    background-color: transparent;
+}
+.navbar-dark>.container:after {
+    content: '';
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+.navbar .nav-link.active{
+             font-weight: 600;
+             color:#FD7E09;
+           }
+
+           /* section */
+           @media (min-width: 768px) {
+    .section-top {
+        padding-top: calc(7.5rem + 5.8125rem);
+    }
+}
+
+.section {
+    position: relative;
+ 
+}
+
+.bg-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+   
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    
+}
+
+.bg-overlay:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #212529;
+    opacity: .55;
+    
+}
+
+
+.bg-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  
+  
+}
+
+.bg-triangle-light {
+  border-color: #fff transparent transparent transparent;
+}
+
+.bg-triangle-bottom {
+  border-width: 0 0 100px 100px;
+}
+
+.bg-triangle-left {
+  transform: rotate(270deg);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.section .container {
+    position: relative;
+    z-index: 1;
+    width: 1440px;
+height: 527px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1200px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .section-full.section-top>.container>.row {
+        min-height: calc(100vh - 7.5rem* 2 - 5.8125rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .section-full .container>.row:before {
+        content: '';
+        min-height: inherit;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-7 {
+        -webkit-box-flex: 0;
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+    }
+}
+.text-white.text-muted {
+    color: rgba(255, 255, 255, .65) !important;
+}
+    .btn-light-2{
+      border-radius: 20px;
+      border: 1px solid;
+      padding: 10px;
+      color: #FD7E09;
+       line-height: 1;
+       margin: 15px 0px;
+       outline: none;
+       border-end-start-radius: 20px;
+        box-shadow: none;
+        padding: 14px;
+        text-decoration: none;
+        transition: all ease-in .3s;
+        display: inline-block;
+        margin-right: 20px;
+    
+    } 
+
+    
+   
+    
+    .btn-light{
+    border-radius: 20px;
+      border: 1px solid;
+      padding: 10px;
+      background-color:#FD7E09;
+      color: black;
+       line-height: 1;
+       margin: 15px 0px;
+       outline: none;
+       border-end-start-radius: 20px;
+        box-shadow: none;
+        padding: 14px;
+        text-decoration: none;
+        transition: all ease-in .3s;
+    }
+ 
+    .navbar-light:before {
+    opacity: 1;
+}
+.navbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+    z-index: -1;
+}
+
+
+
+
+
+.why-attend-card {
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 0.4px solid var(--Orange, #FD7E09)
+
+
+
+}
+
+.card-section {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  
+
+
+
+}
+
+.why-attend-card-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Bricolage Grotesque;
+font-size: 14px;
+font-weight: 400;
+line-height: 16.8px;
+letter-spacing: 0.02em;
+text-align: center;
+color: var(--white, #FFFFFF);
+padding: 15px;
+
+
+
+}
+
+.paragraph{
+  font-family: Bricolage Grotesque;
+font-size: 16px;
+font-weight: 400;
+line-height: 16.2px;
+letter-spacing: 0.02em;
+text-align: center;
+color: var(--white, #FFFFFF);
+
+
+}
+
+
+.about-container {
+      padding: 50px 0px;
+      margin-top: 30px;
+  }
+  
+  .about-header-text2 {
+gap: 0px;
+opacity: 0px;
+padding: 20px;
+font-family: Inter;
+font-size: 32px;
+font-weight: 600;
+line-height: 38.73px;
+letter-spacing: 0.02em;
+text-align: center;
+color: #FFFFFF;
+
+
+  }
+  .border-title, .border-title-2 {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 0;
+  }
+
+  .about-GAC-img img {
+      margin-bottom: 8px;
+  }
+.lazy {
+width: 500px;
+height:300px;
+top: 1160px;
+left: 772px;
+gap: 0px;
+opacity: 0px;
+
+  }
+  
+  
+  
+  
+  .read{
+color: var(--Grey, #D9D9D9);
+
+  }
+
+  
+  .what-we-offer-card-header {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 1.5;
+          letter-spacing: 0;
+          transition: all ease-in .1s;
+          color: #ffff;
+      }
+    
+    
+    .about-header-text2 {
+  font-family: Inter;
+font-size: 32px;
+font-weight: 600;
+line-height: 38.73px;
+letter-spacing: 0.02em;
+text-align: center;
+color: #fff;
+
+    }
+    
+    .what-we-offer-card {
+      padding: 30px;
+      border: 1px solid grey;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #121212;
+    }
+    
+    .what-we-offer-card-header {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .what-we-offer-wrap {
+          position: relative;
+      }
+   
+      .line-left,.line-right{
+      display: inline-block;
+      width:8%;
+      height: 1px;
+      background-color: #fff;
+      vertical-align: middle;
+      margin: 0 5px;
+    
+    }
+    
+    .schedule-container {
+  padding: 40px 0px 0;
+}
+
+.schedule-header-text2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 15px;
+  letter-spacing: 0;
+  color: black;
+  text-align: center;
+}
+
+
+
+
+
+
+.listing-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.listing-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:#30292266;
+  border-radius: 20px;
+  backdrop-filter: blur(200px)
+
+  
+}
+
+.listing-header-text2 {
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.73px;
+  letter-spacing: 0.02em;
+  color: #D9D9D9;
+  margin-bottom: 20px;
+}
+
+.list {
+  padding: 0;
+  text-align: left;
+}
+
+.list li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #D9D9D9;
+  font-family: Bricolage Grotesque;
+font-weight: 400;
+line-height: 26.4px;
+letter-spacing: 0.02em;
+text-align: left;
+padding: 10px;
+
+
+}
+
+.list li:last-child {
+  margin-bottom: 0;
+}
+
+
+
+.ticket-section {
+padding: 15px;
+border-radius: 10px;
+text-align: center;
+}
+
+.ticket-container {
+display: flex;
+justify-content: space-between;
+margin-top: 10px;
+}
+
+.regular-ticket, .vip-ticket {
+width: 45%;
+padding: 8px;
+border: 1px solid #1b1b1b;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: 0 5px;
+}
+
+
+.ticket-info {
+text-align: left;
+color: #f1e9e9;
+}
+
+
+.ticket-info h2 {
+margin-top: 0;
+}
+
+
+.ticket-description {
+font-family: Bricolage Grotesque;
+font-size: 22px;
+font-weight: 400;
+line-height: 26.4px;
+letter-spacing: 0.02em;
+text-align: center;
+color: #D9D9D9;
+padding: 30px;
+
+}
+
+.pre{
+font-family: Inter;
+font-size: 32px;
+font-weight: 600;
+line-height: 38.73px;
+letter-spacing: 0.02em;
+text-align: center;
+color: #f1e9e9;
+padding: 25px;
+
+    }
+
+
+
+
+footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 50px 0 0;
+}
+
+footer .container {
+  margin-top: 40px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+footer h5 {
+  font-family: Bricolage Grotesque;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-bottom: 20px; /* Added margin */
+}
+
+.team {
+  font-family: Bricolage Grotesque;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+  font-family: Bricolage Grotesque;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-left: 30px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+
+.sic-item i {
+  font-size: 20px;
+  color:  var(--Orange, #FD7E09);
+}
+
+
+.sic-item:hover i {
+  color: #ccc;
+}
+
+.copyright-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy {
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.sic-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  border: 0.2px solid var(--Orange, #FD7E09)
+
+}
+
+.sic-item i {
+  font-size: 20px;
+  color: #FD7E09;
+  ;
+}
+.btn-light-2 {
+  border-radius: 20px;
+  border: 1px solid;
+  color: #FD7E09;
+  line-height: 1;
+  margin: 25px 0px 0px; /* Adjusted margin */
+  outline: none;
+  border-end-start-radius: 20px;
+  box-shadow: none;
+  text-decoration: none;
+  transition: all ease-in .3s;
+  font-family: Bricolage Grotesque;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #A1A1A1;
+}
+
+.btn-light-3 {
+  border-radius: 20px;
+  border: 1px solid;
+  background-color: #FD7E09;
+  color: black;
+  line-height: 1;
+  margin: 25px 0px 0px; /* Adjusted margin */
+  outline: none;
+  border-end-start-radius: 20px;
+  box-shadow: none;
+  padding: 14px;
+  text-decoration: none;
+  transition: all ease-in .3s;
+  font-family: Bricolage Grotesque;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+/* Adjusted hr styles */
+footer hr {
+  width: 100%;
+  border-top: 1px solid #444;
+  margin-top: 40px; /* Added margin */
+}
+
+.copy {
+  font-family: Bricolage Grotesque;
+font-size: 14px;
+font-weight: 400;
+line-height: 16.8px;
+letter-spacing: 0.02em;
+text-align: left;
+
+}
+
+
+
+      
+  
+
+</style>
+  <body>
+    <header>
+ <nav class="navbar navbar-expand-xl navbar-dark  navbar-togglable  fixed-top">
+  <div class="container">
+     <a class="navbar-brand" href="#">
+      <img src="im" alt="">
+                
+            </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+
+         <!-- Links -->
+         <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a href="" class="nav-link">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a href="" class="nav-link">
+              About Us
+            </a>
+          </li>
+         <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Programs
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item active" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+          
+          <li class="nav-item ">
+            <a href="" class="nav-link active">
+              Events
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a href="" class="nav-link">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+
+    </div>
+
+    </div>
+
+  </nav>
+    </header>
+
+    <section class="section section-top section-full">
+
+      <!-- Cover -->
+      <div class="bg-cover" style="background-image: url(Image/image\ copy\ 4.png);"></div>
+
+      <!-- Overlay -->
+      <div class="bg-overlay"></div>
+
+      <!-- Triangles -->
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-left"></div>
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-right"></div>
+      <!-- Content -->
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-8 col-lg-7">
+
+            <!-- Preheading -->
+           
+            <!-- Heading -->
+            <h1 class="text-white text-center mb-4 animate" data-toggle="animation" data-animation="fadeUp" data-animation-order="1" data-animation-trigger="load">
+           
+              WHITEWASHING: A SPOKEN WORD AND LIVE MUSIC CONCERT </h1>
+
+            <!-- Subheading -->
+            <p class="lead text-white text-muted text-center mb-5 animate" data-toggle="animation" data-animation="fadeUp" data-animation-order="2" data-animation-trigger="load">
+              A powerful and immersive spoken word and live music concert that explores the intricate layers of identity, culture, love, and truth            </p>
+
+            <!-- Button -->
+            <p class="text-center mb-0 animate" data-toggle="animation" data-animation="fadeUp" data-animation-order="3" data-animation-trigger="load">
+              <a class="btn-light-2" href="3">Explore our Programs</a>
+              <a class="btn-light" href="#">Join Our Community</a>
+            
+              </a>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+</section>
+
+
+<section id="why-attend-section">
+  <div class="container">
+    <div class="why-attend-wrap">
+      <div class="why-attend-card">
+        <div class="icon-wrap"></div>
+        <div class="card-section">
+          <h3 class="why-attend-card-header">Date</h3>
+          <p class="paragraph">November 28,2024</p>
+        </div>
+        <div class="card-section">
+          <h3 class="why-attend-card-header">Time</h3>
+          <p class="paragraph">November 28,2024</p>
+        </div>
+        <div class="card-section">
+          <h3 class="why-attend-card-header">Dress Code</h3>
+          <p class="paragraph">A touch of white</p>
+        </div>
+        <div class="card-section">
+          <h3 class="why-attend-card-header">Venue</h3>
+          <p class="paragraph">De office pub zero,arena complex,129 <br>
+            Ndidem Usang iso road, Calabar, Nigeria</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container bg-grey-light">
+  <div class="row about-container">
+    <div class="col-md-12 text-center justify-content-center">
+      <h3 class="about-header-text2 mb-5 border-title">
+        WHAT IS WHITEWASHING?
+    </div>
+    <div class="row d-flex align-items-top row-wrapper">
+      <div class="col-md-7 vpad-sm vpad-no-right">
+        <p class="read">WHITEWASHING is a powerful and immersive spoken word and live music concert that explores 
+          the intricate layers of identity,culture,love and truth. WHITEWASHING challenges the audience
+           to think critically about societal norms,history and notion of purity. Through evocative performances, 
+           the artists will explore topics such as cultural erasure, the complexities of love,societal expectations
+            and personal empowerment. This is more than just a concert. It is a though-provoking artistic experience.</p>
+            <br>
+            <br>
+            <p><a class="btn-light" href="3">Buy your tickets now</a>
+
+        <br>
+      </div>
+      <div class="col-md-5 mt-0 mt-md-0 about-GAC-img">
+        <img class="lazy" alt="about-GAC" src="Image/7944a910e0ac3e3735851d1772dfc66b.jpeg">
+      </div>
+      </p>
+    </div>
+  </div>
+</div>
+      
+</section>
+
+
+
+<section id="what-we-offer-section">
+  <div class="container">
+    <div class="what-we-offer-container">
+      <h2 class="about-header-text2 mb-5 border-title-2">
+        <span class="line-left"></span> PRE-EVENT ACTIVITIES <span class="line-right"></span>
+      </h2>
+      <div class="row gap-md-0 gap-5">
+        <div class="col-md-4 what-we-offer-wrap">
+          <div class="what-we-offer-card">
+            <div class="icon-wrap"></div>
+            <h4 class="what-we-offer-card-header">Red Carpet Experience </h4>
+            <p class="read">
+              Get a chance to meet the artists<br>
+               and capture your all-white <br>
+               ensemble in our red carpet<br>
+                photo area.</p>
+           </div>
+        </div>
+        <div class="col-md-4 what-we-offer-wrap">
+          <div class="what-we-offer-card">
+            <div class="icon-wrap"></div>
+            <h4 class="what-we-offer-card-header">Canva Painting Competition</h4>
+            <p class="read">Witness live painting from talented<br>
+               artists who will compete in <br>
+               creating stunning visual interpretations of the <br>
+               WHITEWASHING theme.</p>
+          </div>
+        </div>
+     
+        <div class="col-md-4 what-we-offer-wrap">
+          <div class="what-we-offer-card">
+            <div class="icon-wrap"></div>
+            <h4 class="what-we-offer-card-header">Canva Painting Competition</h4>
+            <p class="read">Engage with interactive art<br>
+              displays and installations curated<br>
+              by local artists,designed to spark conversations and refect on the events theme
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<div class="container bg-grey-light">
+  <div class="row schedule-container">
+    <div class="col-md-12 text-center justify-content-center">
+      <h3 class="schedule-header-text2 mb-5 border-title" style="font-family: Inter; font-size: 32px; font-weight: 600;line-height: 38.73px;letter-spacing: 0.02em;
+      text-align: center; color: #D9D9D9"> 
+        <span class="line-left" ></span> EVENT SCHEDULE <span class="line-right"></span>
+      </h3>
+    </div>
+    <div class="row d-flex align-items-top row-wrapper">
+      <div class="col-md-5 order-md-1 mt-0 mt-md-0 about-GAC-img">
+        <img class="lazy img-fluid" alt="about-GAC" src="Image/image copy 5.png">
+      </div>
+      <div class="col-md-7 order-md-2 vpad-sm vpad-no-right">
+        <h4 class="what-we-offer-card-header"  style="font-family: Bricolage Grotesque; font-size: 24px;font-weight: 500;line-height: 28.8px; letter-spacing: 0.02em;
+        text-align: left;
+        ">Red Carpet & Pre-Event Activities</h4>
+        <p class="overlay-text" style="font-family: Bricolage Grotesque; font-size: 22px; font-weight: 400;line-height: 26.4px; letter-spacing: 0.02em;text-align: left;
+         color: #D9D9D9;">Canva Painting competition,Outdoor art displays &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:00PM </p>
+
+        <hr style="width: 90%; border-width: 0.4px; border-style: solid; border-color: #D9D9D9">
+        <h4 class="what-we-offer-card-header" style="font-family: Bricolage Grotesque; font-size: 24px;font-weight: 500;line-height: 28.8px; letter-spacing: 0.02em;
+        text-align: left;
+        ">WHITEWASHING</h4>
+        <p class="overlay-text" style="font-family: Bricolage Grotesque; font-size: 22px; font-weight: 400;line-height: 26.4px; letter-spacing: 0.02em;text-align: left;
+         color: #D9D9D9;">Canva Painting competition,Outdoor art displays.  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4:00PM</p>
+
+        <hr style="width: 90%; border-width: 0.4px; border-style: solid; border-color: var(--Grey, #D9D9D9) ;">
+        <h4 class="what-we-offer-card-header" style="font-family: Bricolage Grotesque; font-size: 24px;font-weight: 500;line-height: 28.8px; letter-spacing: 0.02em;
+        text-align: left;
+        ">Closing</h4>
+        <p class="overlay-text" style="font-family: Bricolage Grotesque; font-size: 22px; font-weight: 400;line-height: 26.4px; letter-spacing: 0.02em;text-align: left;
+         color: #D9D9D9;" >Closing remarks and networking &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5:00PM</p>
+
+              
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<section class="section listing-section">
+  <div class="listing-container">
+    <h3 class="listing-header-text2 border-title">
+      <span class="line-left"></span> WHY ATTEND WHITEWASHING <span class="line-right"></span>
+    </h3>
+    <ul class="list">
+      <li>Enjoy the unique pre-event outdoor art experience that includes live painting and installations</li>
+      <li>Be part of an intimate gathering that unites creativity, passion and cultural expression</li>
+      <li>Experience a deeply thought-provoking evening of spoken word and music</li>
+      <li>Engage with local and international artists and become part of Calabar’s growing art scene</li>
+      <li>Support the local creative community and contribute to positioning Calabar as a leading destination for art and cultural tourism</li>
+    </ul>
+  </div>
+</section>
+
+
+
+<section class="ticket-section">
+  <h1 class="pre">  <span class="line-left"></span> GET YOUR TICKETS TODAY!!!<span class="line-right"></span>
+  </h1>
+  <div class="ticket-container">
+  <div class="regular-ticket">
+  <div class="ticket-info">
+  <h2>  Regular Ticket <span class="span" style="color: #FD7E09; font-size: 22px;"> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp₦5,000</span></h2>
+  <li class="ellipse" >Entry to enjoy the show</li>
+  </div>
+  </div>
+  <div class="vip-ticket">
+  <div class="ticket-info">
+  <h2>VIP Ticket <span class="span" style="color: #FD7E09; font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ₦50,000</span></h2>
+  <li class="ellipse">Entry to enjoy  <li> Red wine and Light Refreshments the show</li>
+  </div>
+  </div>
+  </div>
+  <p class="ticket-description"> Tickets for WHITEWASHING are now available, secure your spot at this exclusive even by clicking the link below.
+    Dont miss out on a chance to be part of an evening that blends art, culture,and powerful performances in one of Calabar’s
+     most anticipated art events of the year</p>
+     <a class="btn-light" href="3">Buy your tickets now</a>
+
+  </section>
+  
+
+<footer>
+      
+    
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Stay Connected</h5>
+          <p class="team">Join our community to receive the latest update on events, mentorship programs, and opportunities.
+          </p><br>
+          <a class="btn-light-2" href="#">Enter Your Email</a>
+            <a class="btn-light-3" href="#">Subscribe</a>
+
+        </div>
+        <div class="col-md-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled list-inline">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Mentorship</a></li>
+            <li><a href="#">Sponsorship Opportunities</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contact Information</h5>
+          
+<ul class="list-unstyled list-inline">
+<li>
+<a href="#">
+<i class="fa-regular fa-envelope me-2"></i>
+globalcotrie@gmail.com
+</a>
+</li>
+<li>
+<a href="#">
+<i class="fa-solid fa-phone me-2"></i>
+08161436632 or 
+08061436632
+</a>
+</li>
+</ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Legal</h5>
+          <ul class="list-unstyled list-inline">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Condition</a></li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <br>
+      <hr style="width: 100%; border-top: 1px solid #444; padding: 20px;">
+              
+<div class="row copyright-container">
+<div class="col-md-7 col-lg-8">
+<p class="copy">&copy;copyright@2024 Global Art Coeterie. All Rights Reserved.</p>
+</div>
+<div class="col-md-5 col-lg-4 text-right">
+<div class="social-icons">
+  <a class="sic-item" href="(link unavailable)" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+  <a class="sic-item" href="(link unavailable)" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+  <a class="sic-item" href="(link unavailable)" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+</div>
+</div>
+</div>
+    </div>
+  </footer>
+  
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
